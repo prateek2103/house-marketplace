@@ -8,6 +8,7 @@ import ForgotPassword from "./pages/ForgotPassword";
 import Navbar from "./components/Navbar";
 import { ToastContainer } from "react-toastify";
 import PrivateRoute from "./components/PrivateRoute";
+import Category from "./pages/Category";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/profile" element={<PrivateRoute />}>
             <Route path="/profile" element={<Profile />} />
           </Route>
+          <Route path="/category/:categoryName" element={<Category />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />
         </Routes>
